@@ -1,7 +1,5 @@
 # Kartu Menuju Sehat (KMS) pada Bayi
 
-Nama Kelompok : Rafqi Agatha, Aditya Eka
-
 ## :book: Cara menjalankan project ini
 
 clone repo ini
