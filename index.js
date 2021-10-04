@@ -9,6 +9,7 @@ const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
 const balitaRoutes = require("./routes/balitaRoutes");
 const timbangRoutes = require("./routes/timbangRoutes");
+const port = 3001;
 
 app.use(cors());
 app.use(express.json());
@@ -24,6 +25,6 @@ app.use("/timbang", timbangRoutes);
 
 // CRUD
 
-server.listen(3001, function () {
-  console.log("server running");
+server.listen(port, function () {
+  console.log("server running on port "+port);
 });
