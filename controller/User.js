@@ -6,7 +6,6 @@ module.exports = {
     register: (req, res) => {
         authBcrypt.hashPassword(req.body.password, 12, (err, hash) => {
             if (!err) {
-                const newPassword = hash;
                 User.create({
                     ...req.body,
                     password: hash,

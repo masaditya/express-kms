@@ -11,11 +11,9 @@ function verifyToken(req, res, next) {
       }
       //mendapatkan payload disini
       req.user = payload;
-      // res.json(payload.role);
       next();
     });
   } else {
-    // res.status(403).json({ message: "Forbidden" });
     res.status(403).send({
       success: false,
       message: "No Token Provided.",
