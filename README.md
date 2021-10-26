@@ -20,4 +20,6 @@ Lalu run server dengan command
 npm start
 ```
 
+check clone ini
+
 > Note :exclamation: pastikan database mysql telah terhubung, agar tidak ada error ketika awal run project
