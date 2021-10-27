@@ -1,9 +1,11 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const hashPassword = (password, rounds, callback) => {
-  bcrypt.hash(password, rounds, (error, hash) => {
-    callback(error, hash);
-  });
+  bcrypt.genSalt(rounds, (err, salt) => {
+    bcrypt.hash(password, salt, (err, hash) => {
+      callback(err, hash)
+    })
+  })
 };
 
 const compare = (password, dbHash, callback) => {
